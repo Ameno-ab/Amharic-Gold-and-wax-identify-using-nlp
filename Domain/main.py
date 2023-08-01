@@ -4,8 +4,10 @@ from etnltk.tokenize.am import word_tokenize
 from etnltk.lang.am import normalize, remove_stopwords
 from etnltk.lang.am import preprocessing
 from etnltk.lang.am import clean_amharic
-from stopwords_dataset import STOP_WORDS
-from wordnet import *
+
+from Domain.stopwords import *
+from Domain.wordnet import *
+from Domain.ai import answer
 
 
 
@@ -17,7 +19,7 @@ def text_preprocessing(qnie):
     print('words', words)
     cleaned = words
     print('cleaned', cleaned)
-    stop_word_remover(cleaned)
+    return stop_word_remover(cleaned)
 
 
 
@@ -29,7 +31,7 @@ def stop_word_remover(strings_set):
          words.append(string)
     stop_word_string=words
     print("stop words",stop_word_string)
-    double_meaning_identifier(stop_word_string)
+    return double_meaning_identifier(stop_word_string)
 
 def double_meaning_identifier(words):
 #
@@ -195,8 +197,10 @@ def double_meaning_identifier(words):
 
 
 
-  print("hebitr kal",hebir_kal)
-  return hebir_kal
+  # print("hebitr kal",hebir_kal)
+  # return hebir_kal
+
+  return answer(hebir_kal)
 
 
 
