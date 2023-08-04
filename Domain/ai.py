@@ -35,10 +35,10 @@ def answer(question: str = None):
 
         confidence = round(probabilities.max() * 100, 2)
 
-        if confidence < 1.5:
-            return {"success": False, "response": f"As an AI model my responses are based on the information I have been trained on and may not encompass all poems (ቅኔዎች)\t confidence: {confidence}%"}
-        elif confidence > 2 and confidence < 25:
-            return {"success": False, "response": f"Could you insert the whole poem (ቅኔ)?, I can not provide the answer based on the given information\t confidence: {confidence}%"}
+        # if confidence < 1.5:
+        #     return {"success": False, "response": f"As an AI model my responses are based on the information I have been trained on and may not encompass all poems (ቅኔዎች)\t confidence: {confidence}%"}
+        # elif confidence > 2 and confidence < 25:
+        #     return {"success": False, "response": f"Could you insert the whole poem (ቅኔ)?, I can not provide the answer based on the given information\t confidence: {confidence}%"}
 
 
         print("Predicted solution:", predicted_solution[0])
@@ -53,8 +53,7 @@ def answer(question: str = None):
             "answer": predicted_solution[0].replace('\n', ''),
             "word": gold_wax[0],
             "wax": gold_wax[1],
-            "gold": gold_wax[2],
-            'confidence': f"{confidence}%"
+            "gold": gold_wax[2]
         }
 
 

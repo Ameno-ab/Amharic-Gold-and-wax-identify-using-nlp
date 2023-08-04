@@ -197,7 +197,7 @@ def double_meaning_identifier(words):
     print("hebitr kal",hebir_kal)
     # return hebir_kal
 
-    # return answer(hebir_kal)
+    return answer(hebir_kal)
 
 
 if __name__ == '__main__':

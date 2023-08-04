@@ -9,49 +9,6 @@ MDScreen:
 
         MDBottomNavigationItem:
             md_bg_color: "#071416"
-            name: 'screen 1'
-            text: 'Gold and Wax'
-            icon: 'brain'
-            font_name: 'AmharicFont'
-
-            BoxLayout:
-                font_name: 'AmharicFont'
-                orientation: 'vertical'
-                ScrollView:
-                    do_scroll_x: False
-                    font_name: 'AmharicFont'
-                    BoxLayout:
-                        orientation: 'vertical'
-                        padding: '10dp'
-                        size_hint_y: None
-                        height: self.minimum_height
-                        spacing: '10dp'
-                        font_name: 'AmharicFont'
-                        id: question_container
-
-
-        
-        MDBottomNavigationItem:
-            md_bg_color: "#071416"
-            name: 'screen 2'
-            text: 'History'
-            icon: 'robot'
-            font_name: 'AmharicFont'
-
-            BoxLayout:
-                orientation: 'vertical'
-                MDScrollView:
-                    do_scroll_x: False
-                    MDGridLayout:
-                        id: ask_ai_message
-                        cols: 1
-                        adaptive_height: True
-
-
-
-
-        MDBottomNavigationItem:
-            md_bg_color: "#071416"
             name: 'screen 3'
             text: 'Test Me'
             icon: 'cogs'
@@ -89,3 +46,4 @@ MDScreen:
                     MDIconButton:
                         icon: 'send'
                         on_release: app.send_message()
+
